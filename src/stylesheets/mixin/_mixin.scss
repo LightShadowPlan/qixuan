@@ -1,0 +1,60 @@
+$column0number: 24;
+$key-one: 750px;
+$key-two: 970px;
+$key-three: 1200px;
+
+.col{
+    width: 6 / 24 * 100%;
+    transition: .5s;
+}
+.col-xs{
+    width: 6 / 24 * 100%;
+    transition: .5s;
+}
+.col-sm{
+    width: 6 / 24 * 100%;
+    transition: .5s;
+}
+.col-md{
+    width: 6 / 24 * 100%;
+    transition: .5s;
+}
+.col-lg{
+    width: 6 / 24 * 100%;
+    transition: .5s;
+}
+
+@for $i from 1 through 24 {
+    .col-#{$i}{
+        width: $i / 24 * 100%;
+        transition: .5s;
+    }
+}
+@for $i from 1 through 24 {
+    @each $j in $key-three, $key-two, $key-one{
+        @media screen and (max-width: $key-two) {
+            .col-xs-#{$i}{
+                width: $i / 24 * 100%;
+                transition: .5s;
+            }
+        }
+        @media screen and (min-width: $key-one) {
+            .col-sm-#{$i}{
+                width: $i / 24 * 100%;
+                transition: .5s;
+            }
+        }
+        @media screen and (min-width: $key-two) {
+            .col-md-#{$i}{
+                width: $i / 24 * 100%;
+                transition: .5s;
+            }
+        }
+        @media screen and (min-width: $key-three) {
+            .col-lg-#{$i}{
+                width: $i / 24 * 100%;
+                transition: .5s;
+            }
+        }
+    }
+}

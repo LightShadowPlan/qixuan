@@ -1,0 +1,66 @@
+@import "../function/function.scss";
+@import "../mixin/mixin.scss";
+@import "../mixin/base.scss";
+// before && after
+.beforeAndAfter {
+    &::befter{
+        content: '';
+        display: block;
+        height: 0;
+        clear: both;
+        overflow: hidden;
+    }
+    &::after{
+        content: '';
+        display: block;
+        height: 0;
+        clear: both;
+        overflow: hidden;
+    }
+}
+//栅格系统
+// container && container-full
+.container{
+    transition: .5s;
+    width: 1200px;
+    margin: auto;
+    box-sizing: border-box;
+    @extend .beforeAndAfter;
+}
+.container-full{
+    transition: .5s;
+    width: 100%;
+    box-sizing: border-box;
+    @extend .beforeAndAfter;
+}
+
+// row
+
+.row{
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    transition: .5s;
+    @extend .beforeAndAfter;
+}
+
+// col
+
+.col{
+    width: 6 / 24 * 100%;
+    height: auto;
+    transition: .5s;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 1000px) and  (max-width: 1200px){
+    .left {
+
+    }
+}
+
+
+
+
+
+
