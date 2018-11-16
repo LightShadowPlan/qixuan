@@ -11,6 +11,7 @@
 ##### p.title-lt 文档小标题
 ##### p.code 代码展示
 ##### p.c-list 文档内容
+##### p.c-mark 文档内容高亮标记，重要显示
 ##### p.table-half 半个tab缩进
 ##### p.table-1 一个tab缩进
 ##### p.table-2 两个tab缩进

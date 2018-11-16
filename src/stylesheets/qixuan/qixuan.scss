@@ -1,9 +1,16 @@
 @import "../function/function.scss";
 @import "../mixin/mixin.scss";
 @import "../mixin/base.scss";
+
+//
+$column0number: 24;
+$key-one: 750px;
+$key-two: 970px;
+$key-three: 1200px;
+
 // before && after
 .beforeAndAfter {
-    &::befter{
+    &::before{
         content: '';
         display: block;
         height: 0;
@@ -48,16 +55,274 @@
 
 .col{
     width: 6 / 24 * 100%;
-    height: auto;
     transition: .5s;
+    height: auto;
+    float: left;
     box-sizing: border-box;
+    @extend .beforeAndAfter;
+}
+.col-left{
+    margin-left: 2 / 24 * 100%;
+    transition: .5s;
+    height: auto;
+    float: left;
+    box-sizing: border-box;
+    @extend .beforeAndAfter;
+}
+.col-right{
+    margin-right: 2 / 24 * 100%;
+    transition: .5s;
+    height: auto;
+    float: left;
+    box-sizing: border-box;
+    @extend .beforeAndAfter;
 }
 
-@media screen and (min-width: 1000px) and  (max-width: 1200px){
-    .left {
-
+//
+@for $i from 1 through 24 {
+    .col-#{$i} {
+        width: $i / 24 * 100%;
+        transition: .5s;
+        height: auto;
+        float: left;
+        box-sizing: border-box;
+        @extend .beforeAndAfter;
     }
 }
+@for $i from 0 through 23 {
+    .col-left-#{$i} {
+        margin-left: $i / 24 * 100%;
+        transition: .5s;
+        height: auto;
+        float: left;
+        box-sizing: border-box;
+        @extend .beforeAndAfter;
+    }
+}
+@for $i from 0 through 23 {
+    .col-right-#{$i} {
+        margin-right: $i / 24 * 100%;
+        transition: .5s;
+        height: auto;
+        float: left;
+        box-sizing: border-box;
+        @extend .beforeAndAfter;
+    }
+}
+
+//
+@each $colType in col-xs, col-sm, col-md, col-lg {
+    .#{$colType} {
+        width: 6 / 24 * 100%;
+        transition: .5s;
+        height: auto;
+        float: left;
+        box-sizing: border-box;
+        @extend .beforeAndAfter;
+    }
+}
+@each $colType in col-xs-left, col-sm-left, col-md-left, col-lg-left {
+    .#{$colType} {
+        margin-left: 2 / 24 * 100%;
+        transition: .5s;
+        height: auto;
+        float: left;
+        box-sizing: border-box;
+        @extend .beforeAndAfter;
+    }
+}
+@each $colType in col-xs-right, col-sm-right, col-md-right, col-lg-right {
+    .#{$colType} {
+        margin-right: 2 / 24 * 100%;
+        transition: .5s;
+        height: auto;
+        float: left;
+        box-sizing: border-box;
+        @extend .beforeAndAfter;
+    }
+}
+
+//
+@each $colType in col-xs-, col-sm-, col-md-, col-lg- {
+    @for $i from 1 through 24 {
+        .#{$colType}#{$i} {
+            width: $i / 24 * 100%;
+            transition: .5s;
+            height: auto;
+            float: left;
+            box-sizing: border-box;
+            @extend .beforeAndAfter;
+        }
+    }
+}
+@each $colType in col-xs-left-, col-sm-left-, col-md-left-, col-lg-left- {
+    @for $i from 0 through 23 {
+        .#{$colType}#{$i} {
+            margin-left: $i / 24 * 100%;
+            transition: .5s;
+            height: auto;
+            float: left;
+            box-sizing: border-box;
+            @extend .beforeAndAfter;
+        }
+    }
+}
+@each $colType in col-xs-right-, col-sm-right-, col-md-right-, col-lg-right- {
+    @for $i from 0 through 23 {
+        .#{$colType}#{$i} {
+            margin-right: $i / 24 * 100%;
+            transition: .5s;
+            height: auto;
+            float: left;
+            box-sizing: border-box;
+            @extend .beforeAndAfter;
+        }
+    }
+}
+
+//
+@media screen and (max-width: $key-one) {
+    @for $i from 1 through 24 {
+        .col-xs-#{$i} {
+            width: $i / 24 * 100%;
+            transition: .5s;
+            height: auto;
+            float: left;
+            box-sizing: border-box;
+
+        }
+    }
+}
+@media screen and (min-width: $key-one) {
+    @for $i from 1 through 24 {
+        .col-sm-#{$i} {
+            width: $i / 24 * 100%;
+            transition: .5s;
+            height: auto;
+            float: left;
+            box-sizing: border-box;
+        }
+    }
+}
+@media screen and (min-width: $key-two) {
+    @for $i from 1 through 24 {
+        .col-md-#{$i} {
+            width: $i / 24 * 100%;
+            transition: .5s;
+            height: auto;
+            float: left;
+            box-sizing: border-box;
+        }
+    }
+}
+@media screen and (min-width: $key-three) {
+    @for $i from 1 through 24 {
+        .col-lg-#{$i} {
+            width: $i / 24 * 100%;
+            transition: .5s;
+            height: auto;
+            float: left;
+            box-sizing: border-box;
+        }
+    }
+}
+
+//
+@media screen and (max-width: $key-one) {
+    @for $i from 0 through 23 {
+        .col-xs-left-#{$i} {
+            margin-left: $i / 24 * 100%;
+            transition: .5s;
+            height: auto;
+            float: left;
+            box-sizing: border-box;
+
+        }
+    }
+}
+@media screen and (min-width: $key-one) {
+    @for $i from 0 through 23 {
+        .col-sm-left-#{$i} {
+            margin-left: $i / 24 * 100%;
+            transition: .5s;
+            height: auto;
+            float: left;
+            box-sizing: border-box;
+        }
+    }
+}
+@media screen and (min-width: $key-two) {
+    @for $i from 0 through 23 {
+        .col-md-left-#{$i} {
+            margin-left: $i / 24 * 100%;
+            transition: .5s;
+            height: auto;
+            float: left;
+            box-sizing: border-box;
+        }
+    }
+}
+@media screen and (min-width: $key-three) {
+    @for $i from 0 through 23 {
+        .col-lg-left-#{$i} {
+            margin-left: $i / 24 * 100%;
+            transition: .5s;
+            height: auto;
+            float: left;
+            box-sizing: border-box;
+        }
+    }
+}
+
+//
+@media screen and (max-width: $key-one) {
+    @for $i from 0 through 23 {
+        .col-xs-right-#{$i} {
+            margin-right: $i / 24 * 100%;
+            transition: .5s;
+            height: auto;
+            float: left;
+            box-sizing: border-box;
+
+        }
+    }
+}
+@media screen and (min-width: $key-one) {
+    @for $i from 0 through 23 {
+        .col-sm-right-#{$i} {
+            margin-right: $i / 24 * 100%;
+            transition: .5s;
+            height: auto;
+            float: left;
+            box-sizing: border-box;
+        }
+    }
+}
+@media screen and (min-width: $key-two) {
+    @for $i from 0 through 23 {
+        .col-md-right-#{$i} {
+            margin-right: $i / 24 * 100%;
+            transition: .5s;
+            height: auto;
+            float: left;
+            box-sizing: border-box;
+        }
+    }
+}
+@media screen and (min-width: $key-three) {
+    @for $i from 0 through 23 {
+        .col-lg-right-#{$i} {
+            margin-right: $i / 24 * 100%;
+            transition: .5s;
+            height: auto;
+            float: left;
+            box-sizing: border-box;
+        }
+    }
+}
+
+
+
 
 
 
