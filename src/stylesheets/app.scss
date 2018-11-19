@@ -1,15 +1,14 @@
 @import "qixuan/qixuan.scss";
 @import "../static/fonts/font.css";
 
-
 body{
     min-width: 1000px;
-    background-image: linear-gradient(to bottom, #67c8fb, #92aaee, #eaadfb, #eea3b7);
+    background-image: linear-gradient(160deg, #fff 0%, #99b3ff 30%, #b381e9 160%);
 }
 header.header {
     height: 110px;
     min-width: 1000px;
-    background: linear-gradient(to right, #37ecba, #72afd3);
+    background: linear-gradient(to right, #8e6bec, #19d3cf);
     h1.title {
         height: 80px;
         line-height: 100px;

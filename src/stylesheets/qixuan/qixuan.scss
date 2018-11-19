@@ -69,14 +69,7 @@ $key-three: 1200px;
     box-sizing: border-box;
     @extend .beforeAndAfter;
 }
-.col-right{
-    margin-right: 2 / 24 * 100%;
-    transition: .5s;
-    height: auto;
-    float: left;
-    box-sizing: border-box;
-    @extend .beforeAndAfter;
-}
+
 
 //
 @for $i from 1 through 24 {
@@ -99,16 +92,7 @@ $key-three: 1200px;
         @extend .beforeAndAfter;
     }
 }
-@for $i from 0 through 23 {
-    .col-right-#{$i} {
-        margin-right: $i / 24 * 100%;
-        transition: .5s;
-        height: auto;
-        float: left;
-        box-sizing: border-box;
-        @extend .beforeAndAfter;
-    }
-}
+
 
 //
 @each $colType in col-xs, col-sm, col-md, col-lg {
@@ -131,16 +115,7 @@ $key-three: 1200px;
         @extend .beforeAndAfter;
     }
 }
-@each $colType in col-xs-right, col-sm-right, col-md-right, col-lg-right {
-    .#{$colType} {
-        margin-right: 2 / 24 * 100%;
-        transition: .5s;
-        height: auto;
-        float: left;
-        box-sizing: border-box;
-        @extend .beforeAndAfter;
-    }
-}
+
 
 //
 @each $colType in col-xs-, col-sm-, col-md-, col-lg- {
@@ -167,18 +142,7 @@ $key-three: 1200px;
         }
     }
 }
-@each $colType in col-xs-right-, col-sm-right-, col-md-right-, col-lg-right- {
-    @for $i from 0 through 23 {
-        .#{$colType}#{$i} {
-            margin-right: $i / 24 * 100%;
-            transition: .5s;
-            height: auto;
-            float: left;
-            box-sizing: border-box;
-            @extend .beforeAndAfter;
-        }
-    }
-}
+
 
 //
 @media screen and (max-width: $key-one) {
@@ -273,54 +237,6 @@ $key-three: 1200px;
         }
     }
 }
-
-//
-@media screen and (max-width: $key-one) {
-    @for $i from 0 through 23 {
-        .col-xs-right-#{$i} {
-            margin-right: $i / 24 * 100%;
-            transition: .5s;
-            height: auto;
-            float: left;
-            box-sizing: border-box;
-
-        }
-    }
-}
-@media screen and (min-width: $key-one) {
-    @for $i from 0 through 23 {
-        .col-sm-right-#{$i} {
-            margin-right: $i / 24 * 100%;
-            transition: .5s;
-            height: auto;
-            float: left;
-            box-sizing: border-box;
-        }
-    }
-}
-@media screen and (min-width: $key-two) {
-    @for $i from 0 through 23 {
-        .col-md-right-#{$i} {
-            margin-right: $i / 24 * 100%;
-            transition: .5s;
-            height: auto;
-            float: left;
-            box-sizing: border-box;
-        }
-    }
-}
-@media screen and (min-width: $key-three) {
-    @for $i from 0 through 23 {
-        .col-lg-right-#{$i} {
-            margin-right: $i / 24 * 100%;
-            transition: .5s;
-            height: auto;
-            float: left;
-            box-sizing: border-box;
-        }
-    }
-}
-
 
 
 
