@@ -1,9 +1,10 @@
+@import "qixuan/qixuan.min.scss";
 @import "qixuan/qixuan.scss";
 @import "../static/fonts/font.css";
 
 body{
     min-width: 1000px;
-    background-image: linear-gradient(160deg, #fff 0%, #99b3ff 30%, #b381e9 160%);
+    background-image: linear-gradient(to bottom, #fff , #70d1ff, #6382e9, #a86de9);
 }
 header.header {
     height: 110px;
@@ -47,6 +48,7 @@ header.header {
         li.left-list{
             height: 60px;
             line-height: 60px;
+            font-size: 18px;
             padding: 0 20px;
             border-bottom: 1px solid #999;
             border-bottom: 1px solid #999;
@@ -59,14 +61,14 @@ header.header {
             &:hover{
                 height: 100px;
                 line-height: 100px;
-                color: #694acc;
+                color: #ff808a;
                 background: rgba(0,0,0,0.1);
             }
         }
         li.leftSelected{
             height: 100px;
             line-height: 100px;
-            color: #694acc;
+            color: #ff5351;
             background: rgba(0,0,0,0.1);
         }
     }
@@ -108,7 +110,8 @@ header.header {
                 padding: 10px;
                 color: #4c93cc;
                 span{
-                    display: block;
+                    clear: both;
+                    float: left;
                 }
             }
             p.c-list{
@@ -122,7 +125,7 @@ header.header {
             }
             p.mark{
                 background: #242729;
-                color: #f26958;
+                color: #ff5351;
             }
             .demo-area{
                 width: 100%;
@@ -136,20 +139,19 @@ header.header {
             }
             p a.download{
                 float: right;
-                height: 40px;
-                line-height: 40px;
-                width: 90px;
-                border-radius: 20px;
+                height: 30px;
+                line-height: 30px;
+                width: 80px;
+                border-radius: 15px;
                 text-align: center;
-                background: #6e46f3;
-                color: #ccc;
+                background: #9072fc;
                 transition: .5s;
-                margin: 30px 30px 0 0;
+                margin: 0 30px 0 0;
 
             }
             p a.download:hover{
                 color: #fff;
-                background: #623fd6;
+                background: #5454a8;
             }
             .center-list{
                 padding: 10px;

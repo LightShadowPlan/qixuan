@@ -3,7 +3,7 @@
 @import "../mixin/base.scss";
 
 //
-$column0number: 24;
+$column0number: 12;
 $key-one: 750px;
 $key-two: 970px;
 $key-three: 1200px;
@@ -55,7 +55,7 @@ $key-three: 1200px;
 // col
 
 .col{
-    width: 6 / 24 * 100%;
+    width: 3 / 12 * 100%;
     transition: .5s;
     height: auto;
     float: left;
@@ -63,7 +63,7 @@ $key-three: 1200px;
     @extend .beforeAndAfter;
 }
 .col-left{
-    margin-left: 2 / 24 * 100%;
+    margin-left: 1 / 12 * 100%;
     transition: .5s;
     height: auto;
     float: left;
@@ -73,9 +73,9 @@ $key-three: 1200px;
 
 
 //
-@for $i from 1 through 24 {
+@for $i from 1 through 12 {
     .col-#{$i} {
-        width: $i / 24 * 100%;
+        width: $i / 12 * 100%;
         transition: .5s;
         height: auto;
         float: left;
@@ -83,9 +83,9 @@ $key-three: 1200px;
         @extend .beforeAndAfter;
     }
 }
-@for $i from 0 through 23 {
+@for $i from 0 through 11 {
     .col-left-#{$i} {
-        margin-left: $i / 24 * 100%;
+        margin-left: $i / 12 * 100%;
         transition: .5s;
         height: auto;
         float: left;
@@ -98,7 +98,7 @@ $key-three: 1200px;
 //
 @each $colType in col-xs, col-sm, col-md, col-lg {
     .#{$colType} {
-        width: 6 / 24 * 100%;
+        width: 3 / 11 * 100%;
         transition: .5s;
         height: auto;
         float: left;
@@ -108,7 +108,7 @@ $key-three: 1200px;
 }
 @each $colType in col-xs-left, col-sm-left, col-md-left, col-lg-left {
     .#{$colType} {
-        margin-left: 2 / 24 * 100%;
+        margin-left: 1 / 12 * 100%;
         transition: .5s;
         height: auto;
         float: left;
@@ -120,9 +120,9 @@ $key-three: 1200px;
 
 //
 @each $colType in col-xs-, col-sm-, col-md-, col-lg- {
-    @for $i from 1 through 24 {
+    @for $i from 1 through 12 {
         .#{$colType}#{$i} {
-            width: $i / 24 * 100%;
+            width: $i / 12 * 100%;
             transition: .5s;
             height: auto;
             float: left;
@@ -132,9 +132,9 @@ $key-three: 1200px;
     }
 }
 @each $colType in col-xs-left-, col-sm-left-, col-md-left-, col-lg-left- {
-    @for $i from 0 through 23 {
+    @for $i from 0 through 11 {
         .#{$colType}#{$i} {
-            margin-left: $i / 24 * 100%;
+            margin-left: $i / 12 * 100%;
             transition: .5s;
             height: auto;
             float: left;
@@ -147,9 +147,9 @@ $key-three: 1200px;
 
 //
 @media screen and (max-width: $key-one) {
-    @for $i from 1 through 24 {
+    @for $i from 1 through 12 {
         .col-xs-#{$i} {
-            width: $i / 24 * 100%;
+            width: $i / 12 * 100%;
             transition: .5s;
             height: auto;
             float: left;
@@ -159,9 +159,9 @@ $key-three: 1200px;
     }
 }
 @media screen and (min-width: $key-one) {
-    @for $i from 1 through 24 {
+    @for $i from 1 through 12 {
         .col-sm-#{$i} {
-            width: $i / 24 * 100%;
+            width: $i / 12 * 100%;
             transition: .5s;
             height: auto;
             float: left;
@@ -170,9 +170,9 @@ $key-three: 1200px;
     }
 }
 @media screen and (min-width: $key-two) {
-    @for $i from 1 through 24 {
+    @for $i from 1 through 12 {
         .col-md-#{$i} {
-            width: $i / 24 * 100%;
+            width: $i / 12 * 100%;
             transition: .5s;
             height: auto;
             float: left;
@@ -181,9 +181,9 @@ $key-three: 1200px;
     }
 }
 @media screen and (min-width: $key-three) {
-    @for $i from 1 through 24 {
+    @for $i from 1 through 12 {
         .col-lg-#{$i} {
-            width: $i / 24 * 100%;
+            width: $i / 12 * 100%;
             transition: .5s;
             height: auto;
             float: left;
@@ -194,9 +194,9 @@ $key-three: 1200px;
 
 //
 @media screen and (max-width: $key-one) {
-    @for $i from 0 through 23 {
+    @for $i from 0 through 11 {
         .col-xs-left-#{$i} {
-            margin-left: $i / 24 * 100%;
+            margin-left: $i / 12 * 100%;
             transition: .5s;
             height: auto;
             float: left;
@@ -206,9 +206,9 @@ $key-three: 1200px;
     }
 }
 @media screen and (min-width: $key-one) {
-    @for $i from 0 through 23 {
+    @for $i from 0 through 11 {
         .col-sm-left-#{$i} {
-            margin-left: $i / 24 * 100%;
+            margin-left: $i / 12 * 100%;
             transition: .5s;
             height: auto;
             float: left;
@@ -217,9 +217,9 @@ $key-three: 1200px;
     }
 }
 @media screen and (min-width: $key-two) {
-    @for $i from 0 through 23 {
+    @for $i from 0 through 11 {
         .col-md-left-#{$i} {
-            margin-left: $i / 24 * 100%;
+            margin-left: $i / 12 * 100%;
             transition: .5s;
             height: auto;
             float: left;
@@ -228,9 +228,9 @@ $key-three: 1200px;
     }
 }
 @media screen and (min-width: $key-three) {
-    @for $i from 0 through 23 {
+    @for $i from 0 through 11 {
         .col-lg-left-#{$i} {
-            margin-left: $i / 24 * 100%;
+            margin-left: $i / 12 * 100%;
             transition: .5s;
             height: auto;
             float: left;

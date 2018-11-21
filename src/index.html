@@ -15,9 +15,9 @@
     <ul class="left-box">
         <li class="left-list leftSelected">Hello qixuan</li>
         <li class="left-list">栅格系统</li>
-        <li class="left-list">导航栏</li>
         <li class="left-list">按钮</li>
         <li class="left-list">表单</li>
+        <li class="left-list">导航栏</li>
     </ul>
 </div>
 <div class="q-container">
@@ -25,31 +25,38 @@
         <div class="center">
             <div class="center-list" id="HelloQixuan">
                 <p class="title">qixuan 只是一个轻量级的css响应式框架</p>
-                <p class="title-lt">使用方法1 : 直接下载，解压，添加到项目, 在index.css中引用(看具体项目结构)</p>
+                <p class="title-lt">使用方法 : 直接下载，添加到项目, 在index.css中引用(看具体项目结构)</p>
                 <p class="c-list">
                     <img src="./static/images/donwloadQX.png" alt=""/>
-                    <a class="download" href="./stylesheets/qixuan/qixuan.css" download="qixuan.css">下载</a></p>
-                <p class="code">@import "./qixaun/qixuan.css"</p>
-                <p class="title-lt">使用方法2 : 引用CDN</p>
                 <p class="code">
-                    <span>&lt;script src="http://localhost:3000">&lt;/script></span>
+                    <span class="table-1">@import "./qixaun/qixuan.css"</span>
+                    <a class="download" href="./stylesheets/qixuan/qixuan.css" download="qixuan.css">下载</a></p>
+                </p>
+                <p class="c-list mark">qixuan.css是24栅格系统的，若你的项目12栅格就能搞定，你可以下载文件更小的12栅格系统qixuan.min.css</p>
+                <p class="code">
+                    <span class="table-1">@import "./qixuan/qixuan.min.css"</span>
+                    <a class="download" href="./stylesheets/qixuan/qixuan.min.css" download="qixuan.min.css">下载</a></p>
                 </p>
             </div>
             <div class="center-list" id="GridSystem">
-                <p class="title">qixuan 采用24栅格系统</p>
-                <p class="title-lt">使用规则 :</p>
+                <p class="title">qixuan 采用12 || 24栅格系统</p>
+                <p class="title-lt">使用规则(以下案例默认采用24栅格系统) :</p>
                 <p class="c-list">.container 默认宽度 1200px &nbsp;&nbsp; .container-full 宽度 100%</p><br/>
                 <p class="c-list">.row 在 .container 内 &nbsp;&nbsp; 默认高度 0px</p><br/>
                 <p class="c-list">.col-1 表示一列的宽度占整行的 1 / 24 &nbsp;&nbsp; 默认为col-6( col 等同于 col-6 )</p>
-                <p class="c-list">.col-xs-1 表示在超小屏幕下(小于768px)一列的宽度占整行的 1 / 24  &nbsp;&nbsp;col-sm-1&nbsp;&nbsp;col-md-1&nbsp;&nbsp; col-lg-1 &nbsp;&nbsp;</p>
-                <p class="c-list">默认 col-xs / col-sm / col-md / col-lg &nbsp;&nbsp;均等于  col-6</p>
+                <p class="c-list">.col-xs-1 表示在超小屏幕下(小于768px)一列的宽度占整行的 1 / 24</p>
+                <p class="c-list">默认 col-xs / col-sm / col-md / col-lg &nbsp;&nbsp;均等于 col-6</p>
                 <p class="c-list mark">若行内的列的总宽度超出行宽度，则超出的列换到下一行</p><br/>
-                <p class="c-list">.col-left-1 表示一列的左边距占整行的 1 / 24 &nbsp;&nbsp; 默认为col-left-6( col-left 等同于 col-left-2 )</p>
-                <p class="c-list">.col-xs-left-1 表示在超小屏幕下(小于768px)一列的左边距占整行的 1 / 24  &nbsp;&nbsp;col-sm-left-1&nbsp;&nbsp;col-md-left-1&nbsp;&nbsp; col-lg-left-1 &nbsp;&nbsp;</p>
-                <p class="c-list">默认 col-xs-left / col-sm-left / col-md-left / col-lg-left &nbsp;&nbsp;均等于  col-left  &nbsp;&nbsp;从0-23&nbsp;&nbsp;没有 col-left-24</p><br/>
-                <p class="c-list">.col-right-1 表示一列的右边距占整行的 1 / 24 &nbsp;&nbsp; 默认为col-right-6( col-right 等同于 col-right-2 )</p>
-                <p class="c-list">.col-xs-right-1 表示在超小屏幕下(小于768px)一列的右边距占整行的 1 / 24  &nbsp;&nbsp;col-sm-right-1&nbsp;&nbsp;col-md-right-1&nbsp;&nbsp; col-lg-right-1 &nbsp;&nbsp;</p>
-                <p class="c-list">默认 col-xs-right / col-sm-right / col-md-right / col-lg-right &nbsp;&nbsp;均等于  col-right  &nbsp;&nbsp;从0-23&nbsp;&nbsp;没有col-right-24</p><br/>
+                <p class="c-list">.col-left-1 表示一列的左边距占整行的 1 / 24 &nbsp;&nbsp; 默认为col-left-6( col-left 等同于 col-left-2
+                    )</p>
+                <p class="c-list">.col-xs-left-1 表示在超小屏幕下(小于768px)一列的左边距占整行的 1 / 24 </p>
+                <p class="c-list">默认 col-xs-left / col-sm-left / col-md-left / col-lg-left &nbsp;&nbsp;均等于 col-left
+                    &nbsp;&nbsp;从0-23&nbsp;&nbsp;没有 col-left-24</p><br/>
+                <p class="c-list">.col-right-1 表示一列的右边距占整行的 1 / 24 &nbsp;&nbsp; 默认为col-right-6( col-right 等同于
+                    col-right-2 )</p>
+                <p class="c-list">.col-xs-right-1 表示在超小屏幕下(小于768px)一列的右边距占整行的 1 / 24 </p>
+                <p class="c-list">默认 col-xs-right / col-sm-right / col-md-right / col-lg-right &nbsp;&nbsp;均等于 col-right
+                    &nbsp;&nbsp;从0-23&nbsp;&nbsp;没有col-right-24</p><br/>
                 <p class="title-lt">代码结构展示 : </p>
                 <p class="code">
                     <span>&lt;div class="container"></span>
@@ -73,85 +80,44 @@
                 <div class="demo-area">
                     <div class="container" style="background: #eee">
                         <div class="row">
-                            <div class="col-sm-4 col-md-6" style="background: pink; height: 30px;font-size: 14px">col-sm-4 col-md-4</div>
-                            <div class="col-left-2  col-sm-4 col-md-6" style="background: greenyellow; height: 30px; font-size: 14px">col-left-2 col-sm-4 col-md-6</div>
-                            <div class="col-sm-4 col-md-8" style=" background: skyblue; height: 30px; font-size: 14px">col-sm-4 col-md-8</div>
+                            <div class="col-sm-4 col-md-6" style="background: #9072fc; height: 30px;font-size: 14px">
+                                col-sm-4 col-md-4
+                            </div>
+                            <div class="col-left-2  col-sm-4 col-md-6"
+                                 style="background: #ff5351; height: 30px; font-size: 14px">col-left-2 col-sm-4
+                                col-md-6
+                            </div>
+                            <div class="col-sm-4 col-md-8" style=" background: skyblue; height: 30px; font-size: 14px">
+                                col-sm-4 col-md-8
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="demo-area">
                     <div class="container-full" style="background: #eee">
                         <div class="row">
-                            <div class="col-xs-6 col-lg-8 col-xs-left-0 col-sm-left-2" style="background: pink; height: 30px;font-size: 14px">col-xs-6 col-lg-8 col-xs-left-0 col-sm-left-2</div>
-                            <div class="col-xs-6 col-lg-6" style="background: greenyellow; height: 30px;font-size: 14px">col-xs-4 col-lg-8</div>
-                            <div class="col-xs-8 col-lg-6" style=" background: skyblue; height: 30px;font-size: 14px">col-xs-4 col-lg-8</div>
+                            <div class="col-xs-6 col-lg-8 col-xs-left-0 col-sm-left-2"
+                                 style="background: #9072fc; height: 30px;font-size: 14px">col-xs-6 col-lg-8 col-xs-left-0
+                                col-sm-left-2
+                            </div>
+                            <div class="col-xs-6 col-lg-6"
+                                 style="background: #ff5351; height: 30px;font-size: 14px">col-xs-4 col-lg-8
+                            </div>
+                            <div class="col-xs-8 col-lg-6" style=" background: skyblue; height: 30px;font-size: 14px">
+                                col-xs-4 col-lg-8
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="center-list" id="NavigationBar">
-                <p class="title">导航栏</p>
-                <p class="title-lt">使用方法1 : 直接下载，解压，添加到项目, 在index.css中引用(看具体项目结构)</p>
-                <p class="c-list">
-                    <img src="./static/images/donwloadQX.png" alt=""/>
-                    <a class="download" href="./stylesheets/qixuan/qixuan.css" download="qixuan.css">下载</a></p>
-                <p class="code">@import "./qixaun/qixuan.css"</p>
-                <p class="title-lt">使用方法2 : 引用CDN</p>
-                <p class="code">
-                    <span>&lt;script src="http://localhost:3000">&lt;/script></span>
-                </p>
             </div>
             <div class="center-list" id="Button">
                 <p class="title">按钮</p>
-                <p class="title-lt">使用规则 :</p>
-                <p class="c-list">.container 默认宽度 1200px &nbsp;&nbsp; .container-full 宽度 100%</p>
-                <p class="c-list">.row 在 .container 内 &nbsp;&nbsp; 默认高度 0px</p>
-                <p class="c-list">.col 在 .row 内 &nbsp;&nbsp; .col-1 表示一列占整行的 1 / 24 &nbsp;&nbsp; 默认为col-1( col 等同于 col-1
-                    )</p>
-                <p class="title-lt">代码结构展示 : </p>
-                <p class="code">
-                    <span>&lt;div class="container"></span>
-                    <span class="table-1">&lt;div class="row"></span>
-                    <span class="table-2">&lt;div class="col-12" style="background: pink">&lt;/div></span>
-                    <span class="table-2">&lt;div class="col-12" style="background: skyblue">&lt;/div></span>
-                    <span class="table-1">&lt;/div></span>
-                    <span>&lt;/div></span>
-                </p>
-                <p class="title-lt">demo :</p>
-                <div class="demo-area">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12" style="background: pink"></div>
-                            <div class="col-12" style="background: skyblue"></div>
-                        </div>
-                    </div>
-                </div>
             </div>
             <div class="center-list" id="Form">
                 <p class="title">表单</p>
-                <p class="title-lt">使用规则 :</p>
-                <p class="c-list">.container 默认宽度 1200px &nbsp;&nbsp; .container-full 宽度 100%</p>
-                <p class="c-list">.row 在 .container 内 &nbsp;&nbsp; 默认高度 0px</p>
-                <p class="c-list">.col 在 .row 内 &nbsp;&nbsp; .col-1 表示一列占整行的 1 / 24 &nbsp;&nbsp; 默认为col-1( col 等同于 col-1
-                    )</p>
-                <p class="title-lt">代码结构展示 : </p>
-                <p class="code">
-                    <span>&lt;div class="container"></span>
-                    <span class="table-1">&lt;div class="row"></span>
-                    <span class="table-2">&lt;div class="col-12" style="background: pink">&lt;/div></span>
-                    <span class="table-2">&lt;div class="col-12" style="background: skyblue">&lt;/div></span>
-                    <span class="table-1">&lt;/div></span>
-                    <span>&lt;/div></span>
-                </p>
-                <p class="title-lt">demo :</p>
-                <div class="demo-area">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12" style="background: pink"></div>
-                            <div class="col-12" style="background: skyblue"></div>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            <div class="center-list" id="NavigationBar">
+                <p class="title">导航栏</p>
             </div>
         </div>
     </div>
