@@ -8,23 +8,7 @@ $key-one: 750px;
 $key-two: 970px;
 $key-three: 1200px;
 
-// before && after
-.beforeAndAfter {
-    &::before{
-        content: '';
-        display: block;
-        height: 0;
-        clear: both;
-        overflow: hidden;
-    }
-    &::after{
-        content: '';
-        display: block;
-        height: 0;
-        clear: both;
-        overflow: hidden;
-    }
-}
+
 //栅格系统
 // container && container-full
 .container{

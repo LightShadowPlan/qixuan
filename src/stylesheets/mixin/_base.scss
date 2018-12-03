@@ -2,8 +2,11 @@ html, body, div, ul, li, h1, h2, h3, h4, h5, h6, p, span, dl, dt, dd, ol, form, 
     margin: 0;
     padding: 0;
 }
-
+html, body{
+    width: 100%;
+}
 body {
+    height: 100%;
     font-family: "Microsoft YaHei";
     font-size: 16px;
     color: #333;
@@ -46,15 +49,6 @@ textarea {
     zoom: 1;
 }
 
-.clearfix:after {
-    content: ".";
-    width: 0;
-    height: 0;
-    visibility: hidden;
-    display: block;
-    clear: both;
-    overflow: hidden;
-}
 
 .fl {
     float: left;
@@ -86,4 +80,22 @@ textarea {
     display: inline-block;
     *display: inline;
     *zoom: 1;
+}
+
+// before && after
+.beforeAndAfter {
+    &::before{
+        content: '';
+        display: block;
+        height: 0;
+        clear: both;
+        overflow: hidden;
+    }
+    &::after{
+        content: '';
+        display: block;
+        height: 0;
+        clear: both;
+        overflow: hidden;
+    }
 }
