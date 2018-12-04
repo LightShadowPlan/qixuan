@@ -1,6 +1,6 @@
 (function() {
 
-    var width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;
+    var width, height, canvas, ctx, points, target, animateHeader = true;
 
     // Main
     initHeader();
@@ -12,9 +12,6 @@
         // height = window.innerHeight;
         height = $('#Container').height();
         target = {x: width/2, y: height/2};
-
-        largeHeader = document.getElementById('large-header');
-        largeHeader.style.height = height+'px';
 
         canvas = document.getElementById('demo-canvas');
         canvas.width = width;
@@ -98,14 +95,15 @@
     }
 
     function resize() {
-        width = window.innerWidth;
-        // height = window.innerHeight;
+        width = $('.Container').width();
         height = $('.Container').height();
-        console.log(height);
-        largeHeader.style.height = height+'px';
         canvas.width = width;
         canvas.height = height;
+        target = {x: width/2, y: height/2};
     }
+    $('.Navigation-box').on('click','.nav-list-box li',function(){
+        resize()
+    })
 
     // animation
     function initAnimation() {
@@ -120,7 +118,7 @@
             ctx.clearRect(0,0,width,height);
             for(var i in points) {
                 // detect points in range
-                if(Math.abs(getDistance(target, points[i])) < 4000) {
+                if(Math.abs(getDistance(target, points[i])) < 5000) {
                     points[i].active = 0.3;
                     points[i].circle.active = 0.6;
                 } else if(Math.abs(getDistance(target, points[i])) < 20000) {

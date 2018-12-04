@@ -13,6 +13,7 @@ header.Header {
     border-bottom: 0.01rem solid #ccc;
     position: relative;
     z-index: 999;
+    cursor: pointer;
     @extend .beforeAndAfter;
     p.title {
         height: 1.07rem;
@@ -79,6 +80,7 @@ header.Header {
                     height: 1rem;
                     box-sizing: border-box;
                     transition: 0.3s;
+                    font-size: 0.32rem;
                     &:hover{
                         background: rgba(0,0,0,0.5);
                         color: #00b3fb;
@@ -107,15 +109,93 @@ header.Header {
     overflow: hidden;
     @extend .beforeAndAfter;
     .content{
+        width: 100%;
+        height: auto;
         position: absolute;
         z-index: -1;
         margin: 0;
         padding: 0;
         background: #383838;
     }
-    p{
+    .container-view{
         width: 100%;
-        height: 6.67rem;
+        height: auto;
+        min-height: 12.00rem;
+        overflow: hidden;
+        @extend .beforeAndAfter;
+        .textArea{
+            width: 100%;
+            min-height: 6.67rem;
+            box-sizing: border-box;
+            padding: 0.27rem;
+            @extend .beforeAndAfter;
+            p{
+                width: 100%;
+                min-height: 0.53rem;
+                line-height: 0.53rem;
+                box-sizing: border-box;
+                font-size: 0.32rem;
+                color: #fff;
+                word-wrap: break-word;
+            }
+            p.title{
+                min-height: 0.80rem;
+                line-height: 0.80rem;
+                font-size: 0.67rem;
+                letter-spacing: 0.07rem;
+                margin: 0.27rem;
+            }
+            p.lt-title{
+                min-height: 0.67rem;
+                line-height: 0.67rem;
+                font-size: 0.40rem;
+            }
+            p.text{
+                text-indent: 0.64rem;
+            }
+            p.mark{
+                color: tomato;
+            }
+            p .mark{
+                color: tomato;
+            }
+            p.code{
+                color: #00ebe7;
+                border-left: 0.13rem solid #00b4eb;
+                padding-left: 0.64rem;
+                background: rgba(255,255,255,0.1);
+                &::selection{
+                    background: rgba(0,0,0,0.5);
+                }
+            }
+            .table1{
+                text-indent: 0.64rem;
+            }
+            .table2{
+                text-indent: 1.28rem;
+            }
+            .table3{
+                text-indent: 1.92rem;
+            }
+            .download{
+                height: 0.80rem;
+                line-height: 0.80rem;
+                display: flex;
+                margin: 0.13rem 0;
+                justify-content: space-around;
+                a{
+                    display: block;
+                    height: 0.80rem;
+                    padding: 0 0.40rem;
+                    background: rgba(0,0,0,0.5);
+                    color: #00b3fb;
+                    border-radius: 0.40rem;
+                }
+            }
+            a{
+                color: #00b3fb;
+            }
+        }
     }
 }
 

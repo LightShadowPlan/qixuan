@@ -1,0 +1,42 @@
+<div class="textArea">
+    <p class="title">qixuan</p>
+    <p class="lt-title">简洁 轻量 的css响应式框架</p>
+    <p class="text"><span class="mark">qixuan</span> 是一个采用 12 || 24 栅格系统的响应式框架</p>
+    <p class="text">qixuan.min.css为12栅格 大小: 49.9KB &nbsp;&nbsp;&nbsp;&nbsp; qixuan.css 为24栅格 大小: 31.3KB</p>
+    <p class="download">
+        <a href="./stylesheets/qixuan/qixuan.css" download="qixuan.css">qixuan.css</a>
+        <a href="./stylesheets/qixuan/qixuan.min.css" download="qixuan.min.css">qixuan.min.css</a>
+    </p>
+    <p class="lt-title">起步</p>
+    <p class="text mark">代码结构</p>
+    <p class="code">&lt;div class="container"></p>
+    <p class="code table1">&lt;div class="row"></p>
+    <p class="code table2">&lt;div class="col">&lt;/div></p>
+    <p class="code table2">&lt;div class="col-3">&lt;/div></p>
+    <p class="code table1">&lt;/div></p>
+    <p class="code">&lt;/div></p>
+    <p class="text mark">栅格说明</p>
+    <p class="text">container 宽度100%，最大宽度1200px，另有 container-full，宽度满屏</p>
+    <p class="text">col 默认占 6 / 24 ,等同于 col-6</p>
+    <p class="text">col-xs, col-sm, col-md, col-lg 分别表示超小屏，小屏，中屏，大屏下的占比, 默认占 6 / 24 , 如: col-md-6</p>
+    <p class="text mark">栅格边距</p>
+    <p class="text">col-left 表示栅格单元左边距的占比, 默认占 6 / 24 , 如: col-left-6</p>
+    <p class="text">col-xs-left, col-sm-left, col-md-left, col-lg-left 分别表示超小屏，小屏，中屏，大屏下栅格单元左边距的占比, 默认占 6 / 24 , 如: col-md-left-6</p>
+    <p class="lt-title">Demo</p>
+    <p class="text mark">container</p>
+    <div class="container" style="background: rgba(255,255,255,0.1)">
+        <div class="row" style="height: 0.80rem;text-align: center;line-height: 0.80rem">
+            <div class="col-3" style="background: #6391e1">col-3</div>
+            <div class="col" style="background: tomato">col</div>
+            <div class="col-9" style="background: #00ebe7">col-9</div>
+        </div>
+    </div>
+    <p class="text mark">container-full</p>
+    <div class="container-full" style="background: rgba(255,255,255,0.1)">
+        <div class="row" style="height: 0.80rem;text-align: center;line-height: 0.80rem">
+            <div class="col-3" style="background: #6391e1">col-3</div>
+            <div class="col col-left" style="background: tomato">col col-left</div>
+            <div class="col-9 col-md-left-3 col-lg-left-0" style="background: #00ebe7">col-9 col-md-left-3 col-lg-left-0</div>
+        </div>
+    </div>
+</div>
