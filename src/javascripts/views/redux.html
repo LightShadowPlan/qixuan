@@ -1,3 +1,77 @@
 <div class="textArea">
     <p class="title">redux</p>
+    <p class="lt-title">redux 核心概念</p>
+    <p class="text">要更新 <span class="mark">state</span> 中的数据，则要发起一个 <span class="mark">action</span> ，强制使用 action 得好处是能够知道应用发生了什么</p>
+    <p class="text">为了把 <span class="mark">action</span> 和 <span class="mark">state</span> 连接起来，开发了一些函数（ <span class="mark">reducer</span> ）， reducer 接受 state 和 action 并返回新的 state</p>
+    <p class="text">如: 可以先开发两个 reducer ，再开发一个 reducer 调用这两个 reducer ，进而管理整个应用的 state</p>
+    <p class="lt-title">三大原则</p>
+    <p class="text mark">单一数据源</p>
+    <p class="text">整个应用的 <span class="mark">state</span> 存储在一棵 <span class="mark">object tree</span> 中 ， 并且这个 object tree 只存在于唯一的 <span class="mark">store</span> 中</p>
+    <p class="text mark">state 是只读的</p>
+    <p class="text">唯一改变 state 的方法就是触发 action ，action 是一个用于 <span class="mark">描述已发生事件</span> 的普通 <span class="mark">对象</span></p>
+    <p class="text">确保了视图和网络请求都不能直接修改 state ， 它们只能表达想要修改的意图</p>
+    <p class="text mark">使用纯函数来执行修改</p>
+    <p class="text">通过编写一些纯函数 reducer， 描述 action 如何改变 state tree ， 随着应用变大，可以拆分多个 reducer ，分别独立操作 state tree 的不同部分</p>
+    <p class="lt-title">基础</p>
+    <p class="text mark">Action</p>
+    <p class="text"><span class="mark">Action</span> 是把数据从应用传到 store 的有效载荷。它是 store 数据的唯一来源。 一般来说你会通过 store.dispatch() 将 action 传到 store</p>
+    <p class="text"><span class="mark">Action</span> 本质上是 JavaScript 普通对象。约定，action 内必须使用一个字符串类型的 type 字段来表示将要执行的动作。通常 type 会被定义成字符串常量。当应用规模越来越大时，建议使用单独的模块或文件来存放 action。</p>
+    <p class="text">在 action 中添加 index 来表示用户完成任务的动作序列号，可以通过下标 index 来引用特定的任务，实际项目中在新建数据时生成唯一的 ID 作为数据的引用标识。</p>
+    <p class="text">应尽量减少在 action 中传递的数据，传递 index 就比把整个任务对象传过去要好</p>
+    <p class="text"><span class="mark">Action 创建函数</span>，就是生成 action 的方法，只是简单的返回一个 action， Action 创建函数也可以是异步非纯函数</p>
+    <p class="text mark">Reducer</p>
+    <p class="text">reducer 就是一个 <span class="mark">纯函数</span>，保持 reducer 纯净非常重要，<span class="mark">永远不要</span>在 reducer 里做这些操作 :</p>
+    <p class="text"><span class="mark">修改</span>传入参数</p>
+    <p class="text"><span class="mark">执行</span>有副作用的操作，如 API 请求和路由跳转</p>
+    <p class="text"><span class="mark">调用</span>非纯函数，如 Date.now() 或 Math.random()</p>
+    <p class="text">只要传入参数相同，返回计算得到的下一个 state 就一定相同。没有特殊情况、没有副作用，没有 API 请求、没有变量修改，单纯执行计算</p>
+
+    <p class="lt-title">redux 图示</p>
+    <p class="img-md"><img src="../../static/images/redux.jpg" alt=""/></p>
+    <p class="text mark">首先写一些小的纯函数 reducers ，再合并成 reducer</p>
+    <p class="code">function <span class="mark">visibilityilter</span> (state = 'SHOW_ALL, actiopn)' {</p>
+    <p class="code table1">switch (action.tyle){</p>
+    <p class="code table2">case 'SET_VISIBILITY_ILTER' :</p>
+    <p class="code table3">return action.filter</p>
+    <p class="code table2">default :</p>
+    <p class="code table3">return state</p>
+    <p class="code table1">}</p>
+    <p class="code table">}</p>
+    <br/>
+    <p class="code">function <spam class="mark">todos</spam> (state = [],action) {</p>
+    <p class="code table1">switch (action.tyle){</p>
+    <p class="code table2">case 'ADD_TODO' :</p>
+    <p class="code table3">return [</p>
+    <p class="code table4">...state ,</p>
+    <p class="code table4">{</p>
+    <p class="code table5">text : action.text</p>
+    <p class="code table5">completed : false</p>
+    <p class="code table4">}</p>
+    <p class="code table3">]</p>
+    <p class="code table2">default :</p>
+    <p class="code table3">return : state</p>
+    <p class="code table1">}</p>
+    <p class="code">}</p>
+    <br/>
+    <p class="code">合并 reducer</p>
+    <p class="code">function <span class="mark">todoApp</span>(state = {}, action) {</p>
+    <p class="code table1">return {</p>
+    <p class="code table2">todos: todos(state.todos, action),</p>
+    <p class="code table2">visibilityFilter: visibilityFilter(state.visibilityFilter, action)</p>
+    <p class="code table1">};</p>
+    <p class="code">}</p>
+    <p class="text mark">创建 store</p>
+    <p class="code">import { <span class="mark">combineReducers</span>, <span class="mark">createStore</span> } from 'redux'</p>
+    <p class="code">let <span class="mark">reducer</span> = combineReducers({ visibilityFilter, todos })</p>
+    <p class="code">let <span class="mark">store</span> = createStore(reducer)</p>
+    <p class="text mark">触发 action</p>
+    <p class="code">store.dispatch({</p>
+    <p class="code table1">type: 'COMPLETE_TODO',</p>
+    <p class="code table1">index: 1</p>
+    <p class="code">})</p>
+    <p class="code">store.dispatch({</p>
+    <p class="code table1">type: 'SET_VISIBILITY_FILTER',</p>
+    <p class="code table1">filter: 'SHOW_COMPLETED'</p>
+    <p class="code">})</p>
+
 </div>

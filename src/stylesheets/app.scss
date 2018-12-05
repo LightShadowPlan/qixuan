@@ -127,7 +127,7 @@ header.Header {
             width: 100%;
             min-height: 6.67rem;
             box-sizing: border-box;
-            padding: 0.27rem;
+            padding: 0.40rem;
             @extend .beforeAndAfter;
             p{
                 width: 100%;
@@ -143,17 +143,20 @@ header.Header {
                 line-height: 0.80rem;
                 font-size: 0.67rem;
                 letter-spacing: 0.07rem;
-                margin: 0.27rem;
+                margin: 0.27rem 0;
             }
             p.lt-title{
                 min-height: 0.67rem;
                 line-height: 0.67rem;
                 font-size: 0.40rem;
+                margin-top: 0.40rem;
             }
             p.text{
                 text-indent: 0.64rem;
             }
             p.mark{
+                margin-top: 0.13rem;
+                text-indent: 0;
                 color: tomato;
             }
             p .mark{
@@ -168,6 +171,26 @@ header.Header {
                     background: rgba(0,0,0,0.5);
                 }
             }
+            p.img-xs{
+                img{
+                    height: 100px;
+                }
+            }
+            p.img-sm{
+                img{
+                    height: 150px;
+                }
+            }
+            p.img-md{
+                img{
+                    height: 200px;
+                }
+            }
+            p.img-lg{
+                img{
+                    height: 250px;
+                }
+            }
             .table1{
                 text-indent: 0.64rem;
             }
@@ -176,6 +199,12 @@ header.Header {
             }
             .table3{
                 text-indent: 1.92rem;
+            }
+            .table4{
+                text-indent: 2.56rem;
+            }
+            .table5{
+                text-indent: 3.20rem;
             }
             .download{
                 height: 0.80rem;
