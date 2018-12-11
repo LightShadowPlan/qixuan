@@ -10,7 +10,6 @@ header.Header {
     height: 1.47rem;
     background: linear-gradient(to right, #8e6bec, #19d3cf);
     overflow: hidden;
-    border-bottom: 0.01rem solid #ccc;
     position: relative;
     z-index: 999;
     cursor: pointer;
@@ -30,82 +29,13 @@ header.Header {
     }
 
 }
-.Navigation{
-    width: 100%;
-    height: 1rem;
-    box-sizing: border-box;
-    position: sticky;
-    top: 0;
-    background: linear-gradient(to right, #8e6bec, #19d3cf);
-    z-index: 99;
-    ul.Navigation-box{
-        width: 100%;
-        height: 100%;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        position: relative;
-        li.Nav-list{
-            width: 100%;
-            height: 1rem;
-            line-height: 1rem;
-            text-align: center;
-            color: #444444;
-            font-size: 0.27rem;
-            cursor: pointer;
-            position: relative;
-            p.nav-title{
-                width: 100%;
-                height: 1rem;
-                position: absolute;
-                top: 0;
-                z-index: 999;
-                transition: 0.3s;
-            }
-            ul.nav-list-box{
-                width: 100%;
-                height: auto;
-                max-height: 8.00rem;
-                overflow: auto;
-                box-sizing: border-box;
-                padding: 10px 0;
-                background: rgba(0,0,0,0.5);
-                color: #eee;
-                position: absolute;
-                top: -8rem;
-                transition: 0.3s;
-                li{
-                    width: 100%;
-                    height: 1rem;
-                    box-sizing: border-box;
-                    transition: 0.3s;
-                    font-size: 0.32rem;
-                    &:hover{
-                        background: rgba(0,0,0,0.5);
-                        color: #00b3fb;
-                    }
-                }
-            }
-            &:hover{
-                p.nav-title{
-                    color: #ffffff;
-                    background: rgba(0,0,0,0.5);
-                }
-                ul.nav-list-box{
-                    top: 1rem;
-                }
-            }
-
-        }
-
-    }
-}
 .Container {
     width: 100%;
     height: auto;
     box-sizing: border-box;
-    position: relative;
+    position: absolute;
+    top: 1.47rem;
+    bottom: 0;
     overflow: hidden;
     @extend .beforeAndAfter;
     .content{
@@ -119,8 +49,7 @@ header.Header {
     }
     .container-view{
         width: 100%;
-        height: auto;
-        min-height: 12.00rem;
+        height: 10.00rem;
         overflow: hidden;
         @extend .beforeAndAfter;
         .textArea{
@@ -207,18 +136,22 @@ header.Header {
                 text-indent: 3.20rem;
             }
             .download{
-                height: 0.80rem;
-                line-height: 0.80rem;
+                height: 1.60rem;
                 display: flex;
                 margin: 0.13rem 0;
                 justify-content: space-around;
                 a{
-                    display: block;
-                    height: 0.80rem;
-                    padding: 0 0.40rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    width: 4.80rem;
+                    height: 1.60rem;
+                    text-align: center;
                     background: rgba(0,0,0,0.5);
                     color: #00b3fb;
-                    border-radius: 0.40rem;
+                    span:first-child{
+                        font-size: 0.53rem;
+                    }
                 }
             }
             a{

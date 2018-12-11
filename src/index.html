@@ -10,37 +10,46 @@
 <header class="Header">
     <p class="title" id="topTitle">qixuan</p>
 </header>
-<div class="Navigation">
-    <ul class="Navigation-box">
-        <li class="Nav-list active">
-            <p class="nav-title">蓝方格</p>
-            <ul class="nav-list-box">
-                <li class="q_qixuan">qixuan</li>
-            </ul>
-        </li>
-        <li class="Nav-list">
-            <p class="nav-title">技术栈</p>
-            <ul class="nav-list-box">
-                <li class="q_redux">redux</li>
-            </ul>
-        </li>
-        <li class="Nav-list">
-            <p class="nav-title">空物语</p>
-            <ul class="nav-list-box">
-                <li class="q_canvas">canvas 实用插件</li>
-                <li class="q_jquery">jquery 小插件</li>
-            </ul>
-        </li>
-    </ul>
-</div>
 <div class="Container" id="Container">
     <div class="content">
         <canvas id="demo-canvas"></canvas>
     </div>
     <div class="container-view">
-
+        <div class="textArea">
+            <p class="lt-title">Download</p>
+            <p class="download">
+                <a href="./stylesheets/qixuan/qixuan.css" download="qixuan.css">
+                    <span>qixuan.css</span>
+                    <span>24栅格 &nbsp;&nbsp; 49.9KB</span>
+                </a>
+                <a href="./stylesheets/qixuan/qixuan.min.css" download="qixuan.min.css">
+                    <span>qixuan.min.css</span>
+                    <span>12栅格 &nbsp;&nbsp; 31.3KB</span>
+                </a>
+            </p>
+            <p class="lt-title">Demo</p>
+            <p class="text mark">container</p>
+            <div class="container" style="background: rgba(255,255,255,0.1)">
+                <div class="row" style="height: 0.80rem;text-align: center;line-height: 0.80rem">
+                    <div class="col-3" style="background: #6391e1">col-3</div>
+                    <div class="col" style="background: tomato">col</div>
+                    <div class="col-9" style="background: #00ebe7">col-9</div>
+                </div>
+            </div>
+            <p class="text mark">container-full</p>
+            <div class="container-full" style="background: rgba(255,255,255,0.1)">
+                <div class="row" style="height: 0.80rem;text-align: center;line-height: 0.80rem">
+                    <div class="col-3" style="background: #6391e1">col-3</div>
+                    <div class="col col-left" style="background: tomato">col col-left</div>
+                    <div class="col-9 col-md-left-3 col-lg-left-0" style="background: #00ebe7">col-9 col-md-left-3 col-lg-left-0</div>
+                </div>
+            </div>
+            <p class="lt-title">More</p>
+            <p><a href="http://47.107.117.147/index.php/2018/07/20/35.html">详细使用参考 qixuan 文档</a></p>
+        </div>
     </div>
 </div>
+
 <script src="./static/javascripts/template-web.js"></script>
 <script src="./static/javascripts/jquery-3.3.1.min.js"></script>
 <script src="./static/javascripts/flexible.js"></script>
